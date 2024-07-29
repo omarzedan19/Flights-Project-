@@ -1,0 +1,93 @@
+/* Style for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the table */
+.flights-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for table header */
+.flights-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Style for table cells */
+.flights-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra stripe table rows */
+.flights-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for table rows */
+.flights-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for action buttons */
+.actions button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .flights-table thead {
+        display: none;
+    }
+
+    .flights-table, .flights-table tbody, .flights-table tr, .flights-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .flights-table tr {
+        margin-bottom: 15px;
+    }
+
+    .flights-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .flights-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
